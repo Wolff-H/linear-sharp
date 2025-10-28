@@ -5,9 +5,9 @@
 @homepageURL https://github.com/Wolff-H/linear-sharp
 @license     MIT
 @author      Wolff
-==UserStyle== */
+==/UserStyle== */
 
-@-moz-document domain("https://linear.app/*/my-issues/*") {
+@-moz-document regexp("https://linear.app/.*/my-issues/.*") {
 	/* 顶部分类栏 */
 	.sc-gGHekU {
 	    gap: 0px;
