@@ -1,0 +1,130 @@
+/* 顶部分类栏 */
+.sc-gGHekU {
+    gap: 0px;
+    padding-left: 1px;
+}
+
+.sc-gGHekU a.sc-dHPMea {
+    border-radius: 0px;
+    margin-left: -1px;
+}
+
+/* 整个大列表行 */
+a.sc-inqUgg {
+    outline: none;
+}
+
+/* 放置 issue 标签 的栏 */
+a.sc-inqUgg>div>div>div>div {
+    border-radius: 0px;
+    column-gap: 0px;
+    padding-left: 1px;
+}
+
+/* issue 标签 */
+a.sc-inqUgg>div>div>div>div>div.sc-jCttAn.cPppzc {
+    margin-left: -1px;
+}
+
+/* issue 标签内层 */
+a.sc-inqUgg>div>div>div>div>div.sc-jCttAn.cPppzc>div {
+    border-radius: 0px;
+    padding-left: 0px;
+}
+
+/* issue 标签的图标容器 */
+a.sc-inqUgg>div>div>div>div>div[data-menu-open]>div>div {
+    height: 100% !important;
+    width: auto !important;
+}
+
+/* issue 标签的图标（普通 div 渲染图标） */
+.iPrzc > div:not([data-type]) {
+    height: 100% !important;
+    border-radius: 0px;
+    max-height: 100% !important;
+    width: 4px;
+    margin-left: 0px;
+}
+
+/* issue 标签的图标（除了普通 div 渲染图标） */
+.iPrzc > div[data-type] {
+    margin-left: 8px;
+}
+
+.iPrzc > svg {
+    margin-left: 8px;
+}
+
+/* assignee 图标 */
+.sc-kmgaWX>div {
+    border-radius: 2px;
+}
+
+/* 高优先级 图标 */
+svg[aria-label="High Priority"] rect {
+    rx: 0;
+}
+
+/* 中优先级 图标 */
+svg[aria-label="Medium Priority"] rect {
+    rx: 0;
+}
+
+svg[aria-label="Medium Priority"] rect:nth-child(3) {
+    fill-opacity: 0.25;
+}
+
+/* 低优先级 图标 */
+svg[aria-label="Low Priority"] rect {
+    rx: 0;
+}
+
+svg[aria-label="Low Priority"] rect:nth-child(2) {
+    fill-opacity: 0.25;
+}
+
+svg[aria-label="Low Priority"] rect:nth-child(3) {
+    fill-opacity: 0.25;
+}
+
+/* 无优先级 图标 */
+svg[aria-label="No Priority"] rect {
+    rx: 0;
+}
+
+/* 紧急优先级 图标 */
+svg[aria-label="Urgent Priority"] {
+	fill: lightcoral;
+}
+
+/* 折叠栏头 */
+.sc-ftNAuJ[data-list-row="true"] {
+	height: 24px !important;
+}
+
+/* 大列表行的内部项目容器栏 */
+div.sc-hVywZJ {
+	outline: none;
+}
+
+div.sc-hVywZJ>div:first-child {
+	order: -99;
+}
+
+/* issue id */
+.sc-jwcAjt[data-column-id="issueId"] {
+	opacity: 0.25;
+	order: -1;
+}
+
+a.sc-inqUgg:hover .sc-jwcAjt[data-column-id="issueId"] {
+	opacity: 1;
+}
+
+
+
+
+
+
+
