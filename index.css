@@ -1,24 +1,54 @@
 /* ==UserStyle==
 @name        Linear Sharp
 @namespace   Wolff
-@version     20251028
+@version     20251030
 @homepageURL https://github.com/Wolff-H/linear-sharp
 @license     MIT
 @author      Wolff
 ==/UserStyle== */
 
-@-moz-document regexp("https://linear.app/.*/my-issues/.*") {
-	/* 顶部分类栏 */
-	.sc-gGHekU {
-	    gap: 0px;
-	    padding-left: 1px;
+
+
+@-moz-document regexp("https://linear.app/.*") {
+	/* 高优先级 图标 */
+	svg[aria-label="High Priority"] rect {
+	    rx: 0;
 	}
 	
-	.sc-gGHekU a.sc-dHPMea {
-	    border-radius: 0px;
-	    margin-left: -1px;
+	/* 中优先级 图标 */
+	svg[aria-label="Medium Priority"] rect {
+	    rx: 0;
 	}
 	
+	svg[aria-label="Medium Priority"] rect:nth-child(3) {
+	    fill-opacity: 0.25;
+	}
+	
+	/* 低优先级 图标 */
+	svg[aria-label="Low Priority"] rect {
+	    rx: 0;
+	}
+	
+	svg[aria-label="Low Priority"] rect:nth-child(2) {
+	    fill-opacity: 0.25;
+	}
+	
+	svg[aria-label="Low Priority"] rect:nth-child(3) {
+	    fill-opacity: 0.25;
+	}
+	
+	/* 无优先级 图标 */
+	svg[aria-label="No Priority"] rect {
+	    rx: 0;
+	}
+	
+	/* 紧急优先级 图标 */
+	svg[aria-label="Urgent Priority"] {
+		fill: lightcoral;
+	}
+}
+
+@-moz-document regexp("https://linear.app/.*/(my-issues|view)/.*") {	
 	/* 整个大列表行 */
 	a.sc-inqUgg {
 	    outline: none;
@@ -71,54 +101,37 @@
 	    border-radius: 2px;
 	}
 	
-	/* 高优先级 图标 */
-	svg[aria-label="High Priority"] rect {
-	    rx: 0;
-	}
-	
-	/* 中优先级 图标 */
-	svg[aria-label="Medium Priority"] rect {
-	    rx: 0;
-	}
-	
-	svg[aria-label="Medium Priority"] rect:nth-child(3) {
-	    fill-opacity: 0.25;
-	}
-	
-	/* 低优先级 图标 */
-	svg[aria-label="Low Priority"] rect {
-	    rx: 0;
-	}
-	
-	svg[aria-label="Low Priority"] rect:nth-child(2) {
-	    fill-opacity: 0.25;
-	}
-	
-	svg[aria-label="Low Priority"] rect:nth-child(3) {
-	    fill-opacity: 0.25;
-	}
-	
-	/* 无优先级 图标 */
-	svg[aria-label="No Priority"] rect {
-	    rx: 0;
-	}
-	
-	/* 紧急优先级 图标 */
-	svg[aria-label="Urgent Priority"] {
-		fill: lightcoral;
-	}
-	
-	/* 折叠栏头 */
+	/* 折叠栏头【可能失效】 */
 	.sc-ftNAuJ[data-list-row="true"] {
 		height: 24px !important;
 	}
 	
-	/* 大列表行的内部项目容器栏 */
+	/* 折叠栏头 */
+	#mainLayoutContainer main div[data-restore-scroll-view] div[data-group-key] div[data-list-row="true"] {
+		height: 24px !important;
+	}
+	
+	/* 大列表行的内部项目容器栏【可能失效】 */
 	div.sc-hVywZJ {
 		outline: none;
 	}
 	
+	/* 【可能失效】 */
 	div.sc-hVywZJ>div:first-child {
+		order: -99;
+	}
+	
+	/* 有时界面里会多加一层 div 【可能失效】*/
+	div.sc-hVywZJ>div>div:first-child {
+		order: -99;
+	}
+	
+	/* 大列表行的内部项目容器栏 */
+	#mainLayoutContainer main div[data-restore-scroll-view] div[data-group-key]>a {
+		outline: none;
+	}
+	
+	#mainLayoutContainer main div[data-restore-scroll-view] div[data-group-key]>a>div>div>div:first-child {
 		order: -99;
 	}
 	
@@ -133,6 +146,93 @@
 	}
 }
 
+@-moz-document regexp("https://linear.app/.*/my-issues/.*") {
+	/* 顶部分类栏【可能失效】 */
+	.sc-gGHekU {
+	    gap: 0px;
+	    padding-left: 1px;
+	}
+	
+	/* 顶部分类栏项目【可能失效】 */
+	.sc-gGHekU a.sc-dHPMea {
+	    border-radius: 0px;
+	    margin-left: -1px;
+	}
+	
+	/* 顶部分类栏 */
+	#root #mainLayoutContainer main header>div:nth-child(2)>div {
+		gap: 0px;
+	    padding-left: 1px;
+	}
+	
+	/* 顶部分类栏项目 */
+	#root #mainLayoutContainer main header>div:nth-child(2)>div a.sc-dHPMea {
+	    border-radius: 0px;
+	    margin-left: -1px;
+	}
+}
+
+@-moz-document regexp("https://linear.app/.*/view/.*") {
+	/* 右栏类别栏/标签页条 */
+	.fHvuvM {
+		border-radius: 0px;
+		padding-left: 1px;
+	}
+	
+	/* 右栏类别栏/标签页条/标签项 */
+	.fHvuvM>button {
+		border-radius: 0px !important;
+		margin-left: -1px;
+	}
+}
+
+@-moz-document regexp("https://linear.app/.*/team/.*") {
+	/* 顶部分类栏 */
+	#mainLayoutContainer main #content-header>header>div:nth-child(2)>div {
+		gap: 0px;
+		padding-left: 1px;
+	}
+	
+	/* 顶部分类栏/项目标签 */
+	#mainLayoutContainer main #content-header>header>div:nth-child(2)>div>div {
+		border-radius: 0px !important;
+		margin-left: -1px;
+		background: none;
+		min-width: 24px; /* 用于充当：顶部分类栏/分割线 */
+	}
+	
+	/* 顶部分类栏/项目标签/内部 anchor */
+	#mainLayoutContainer main #content-header>header>div:nth-child(2)>div>div a {
+		border-radius: 0px;
+	}
+	
+	/* 泳道底色块 */
+	#mainLayoutContainer main div[data-restore-scroll-view="board-container"]>div>div>div>div>div {
+		background-color: transparent;
+	}
+	
+	/* 泳道底色块（真） */
+	#mainLayoutContainer main div[data-restore-scroll-view="board-container"]>div>div>div::after {
+		background: transparent;
+	}
+	
+	/* 泳道项目（内层） */
+	#mainLayoutContainer main div[data-restore-scroll-view="board-container"] div[role="button"] a[data-board-item="true"] {
+		border-color: #cccccc;
+	}
+	
+	/* 泳道项目/标签项容器 */
+	.fPbtLw {
+		column-gap: 0px;
+		padding-left: 1px;
+	}
+	
+	/* 泳道项目/标签项 */
+	.evIZzL {
+		border-radius: 0;
+		margin-left: -1px;
+	}
+}
 
 
 
