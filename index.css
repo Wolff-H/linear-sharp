@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Linear Sharp
 @namespace   Wolff
-@version     20251030
+@version     20251031
 @homepageURL https://github.com/Wolff-H/linear-sharp
 @license     MIT
 @author      Wolff
@@ -222,7 +222,7 @@
 	}
 	
 	/* 泳道项目/标签项容器 */
-	.fPbtLw {
+	#mainLayoutContainer main div[data-restore-scroll-view="board-container"] div[role="button"] a[data-board-item="true"]>div>div {
 		column-gap: 0px;
 		padding-left: 1px;
 	}
@@ -233,7 +233,6 @@
 		margin-left: -1px;
 	}
 }
-
 
 
 
