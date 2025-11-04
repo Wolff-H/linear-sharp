@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Linear Sharp
 @namespace   Wolff
-@version     20251031
+@version     20251104
 @homepageURL https://github.com/Wolff-H/linear-sharp
 @license     MIT
 @author      Wolff
@@ -228,12 +228,11 @@
 	}
 	
 	/* 泳道项目/标签项 */
-	.evIZzL {
+	#mainLayoutContainer main div[data-restore-scroll-view="board-container"] div[role="button"] a[data-board-item="true"]>div>div>div>div {
 		border-radius: 0;
 		margin-left: -1px;
 	}
 }
-
 
 
 
