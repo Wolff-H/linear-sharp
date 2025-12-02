@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Linear Sharp
 @namespace   Wolff
-@version     20251104
+@version     20251202
 @homepageURL https://github.com/Wolff-H/linear-sharp
 @license     MIT
 @author      Wolff
@@ -50,30 +50,30 @@
 
 @-moz-document regexp("https://linear.app/.*/(my-issues|view)/.*") {	
 	/* 整个大列表行 */
-	a.sc-inqUgg {
+	#mainLayoutContainer main div[data-restore-scroll-view] div[data-group-key]>a {
 	    outline: none;
 	}
 	
 	/* 放置 issue 标签 的栏 */
-	a.sc-inqUgg>div>div>div>div {
+	#mainLayoutContainer main div[data-restore-scroll-view] div[data-group-key]>a>div>div>div>div {
 	    border-radius: 0px;
 	    column-gap: 0px;
 	    padding-left: 1px;
 	}
 	
 	/* issue 标签 */
-	a.sc-inqUgg>div>div>div>div>div.sc-jCttAn.cPppzc {
+	#mainLayoutContainer main div[data-restore-scroll-view] div[data-group-key]>a>div>div>div>div>div.sc-jCttAn.cPppzc {
 	    margin-left: -1px;
 	}
 	
 	/* issue 标签内层 */
-	a.sc-inqUgg>div>div>div>div>div.sc-jCttAn.cPppzc>div {
+	#mainLayoutContainer main div[data-restore-scroll-view] div[data-group-key]>a>div>div>div>div>div.sc-jCttAn.cPppzc>div {
 	    border-radius: 0px;
 	    padding-left: 0px;
 	}
 	
 	/* issue 标签的图标容器 */
-	a.sc-inqUgg>div>div>div>div>div[data-menu-open]>div>div {
+	#mainLayoutContainer main div[data-restore-scroll-view] div[data-group-key]>a>div>div>div>div>div[data-menu-open]>div>div {
 	    height: 100% !important;
 	    width: auto !important;
 	}
