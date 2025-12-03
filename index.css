@@ -166,7 +166,7 @@
 	}
 	
 	/* 顶部分类栏项目 */
-	#root #mainLayoutContainer main header>div:nth-child(2)>div a.sc-dHPMea {
+	#root #mainLayoutContainer main header>div:nth-child(2)>div a {
 	    border-radius: 0px;
 	    margin-left: -1px;
 	}
